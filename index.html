@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>Search Sample</title>
+	<link rel="icon" type="image/ico" href="fav.ico">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="dependancy/bootstrap.min.css">
+	<link rel="stylesheet" href="dependancy/sweetalert.min.css">
+
+	<script src="dependancy/jquery-1.12.2.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="dependancy/bootstrap.min.js"></script>
+	<script src="dependancy/sweetalert-dev.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a href="#home" class="navbar-brand">Company Logo</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<a href="#" class="btn btn-warning navbar-btn navbar-right">Sign in</a>
+			<ul class="nav navbar-nav">
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+	
+</div>
+
+
+<!-- Footer -->
+
+<footer>
+	<hr>
+	<div class="container text-center">
+		<h3></h3>
+		<!-- <p>Enter Yout Name and Email</p> -->
+		<div class="container">
+			
+			<div class="row">
+			  <div class="col-lg-4 col-lg-offset-4">
+				<div class="input-group">
+				  <input type="text" class="form-control" id="searchFormControl" placeholder="Search for...">
+				  <span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="searchSample();">Search</button>
+				  </span>
+				</div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+
+		</div>
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<hr>
+		<ul class="list-inline">
+			<li><a href="https://twitter.com/summit_dash" target="_blank">Twitter</a></li>
+			<li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
+			<li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+			<li><a href="#">LinkedIn</a></li>
+		</ul>
+		<p>@ Copyright 2016 ng-Boot Summit</p>
+	</div>
+</footer> <!--End Footer -->
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		//sweetAlert('Hi This is testing Summit');
+		// Woo jQuery starts here...
+		
+	});
+	
+	function searchSample () {
+		var searchText = $('#searchFormControl').val();
+		// Call Service here 
+		/*
+		$.ajax(this.href, {
+		  success: function(data) {
+			 // on Success Search
+			 sweetAlert({ title: "Hi", text: "Your Search Success Message", type: "Success" });
+		  },
+		  error: function() {
+			 sweetAlert({ title: "Oops", text: "An Error Occured during Search", type: "error" });
+		  }
+	    });
+		*/
+		if(searchText){
+			sweetAlert({ title: "You searched for", text: searchText, type: "info" });
+		}
+	}
+</script>
+
+
+</body>
+</html>
